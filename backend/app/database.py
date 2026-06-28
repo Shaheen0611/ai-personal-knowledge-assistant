@@ -27,7 +27,7 @@ class Base(DeclarativeBase):
     pass
 
 def get_db() -> Generator[Session, None, None]:
-    database = SessionLocal
+    database = SessionLocal()
 
     try:
         yield database
